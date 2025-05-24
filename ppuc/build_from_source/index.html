@@ -485,6 +485,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile (PC):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile (Raspberry Pi):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -817,6 +841,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile (PC):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile (Raspberry Pi):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -873,7 +921,7 @@ sudo apt-get upgrade
 sudo apt-get autoremove
 </code></pre></div>
 <h3 id="compiler">Compiler</h3>
-<p>Install the compiler:
+<p>Install the compiler :
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>build-essential
 </code></pre></div></p>
 <p>Install the tools used by build.sh:
@@ -890,12 +938,18 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </code></pre></div></p>
 <h3 id="build">Build</h3>
 <p>Get the source files:
-<div class="highlight"><pre><span></span><code>git clone https://github.com/PPUC/ppuc.git
+<div class="highlight"><pre><span></span><code>mkdir $HOME/projects
+cd $HOME/projects
+git clone https://github.com/PPUC/ppuc.git
 </code></pre></div></p>
-<p>Compile:
+<h4 id="compile-pc">Compile (PC):</h4>
 <div class="highlight"><pre><span></span><code>cd ppuc
 platforms/linux/x64/build.sh
-</code></pre></div></p>
+</code></pre></div>
+<h4 id="compile-raspberry-pi">Compile (Raspberry Pi):</h4>
+<div class="highlight"><pre><span></span><code>cd ppuc
+platforms/linux/aarch64/build.sh
+</code></pre></div>
 <h3 id="test">Test</h3>
 <p>Use the example/t2.yml to try:</p>
 <ul>
