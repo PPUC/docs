@@ -29,7 +29,7 @@ sudo apt-get install build-essential
 
 Install the tools used by build.sh:
 ```shell
-sudo apt install cmake curl autoconf libtool pkg-config zlib1g zlib1g-dev
+sudo apt install git cmake curl autoconf automake libtool pkg-config zlib1g zlib1g-dev
 ```
 
 ### Header files
