@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -834,6 +834,21 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Direct LED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwm-and-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      PWM and LEDs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -908,6 +923,15 @@ icons & this code generated via https://realfavicongenerator.net
   <a href="#how-to-connect-ppuc-pcbs-with-each-other" class="md-nav__link">
     <span class="md-ellipsis">
       How to Connect PPUC-PCBs With Each Other
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rs485-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS485 Adapters
     </span>
   </a>
   
@@ -1157,19 +1181,22 @@ icons & this code generated via https://realfavicongenerator.net
 <p><img alt="solenoid schematic" src="../images/hardware/solenoid_scm.png" /></p>
 <p><img alt="solenoid wiring" src="../images/hardware/solenoid_wire.png" /></p>
 <h3 id="direct-led">Direct LED</h3>
-<p>To connect a LED (including rectifier, current limiting resistor and capacitor) you can use a mid power output that closes the circuit to ground (same is true for drivers of the matrix boards wich could also be used). Therefore the LED must be supplied with a voltage of typically 6.3 V but 5 V will do as well with slightly reduced brightness. You could also use a high power output. In that case connect it like a solenoid and don't forget to adjust the PWM in the config file for correct voltage.</p>
+<p>To connect a LED (including rectifier, current limiting resistor and capacitor) you can use a mid power output that closes the circuit to ground (same is true for drivers of the matrix boards wich could also be used). Therefore the LED must be supplied with a voltage of typically 6.3 V but 5 V will do as well with slightly reduced brightness.</p>
 <p>Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.</p>
+<p><a id="section_pwm_and_leds"></a></p>
+<h4 id="pwm-and-leds">PWM and LEDs</h4>
+<p>You could also use a high power output and connect them like solenoids (with adjusted PWM value in the config file). In that case usually (depending on your voltage) an additional filter circuit is necessary. Unfiltered LEDs may burn if operated with a pulse current bigger than double the rated current. So be careful if you want reduce the voltage more than a factor of two. Many LEDs have a built in filter (they are called "flicker free" or likewise). Unfortunately no technical data is available, so you have to find out yourself. For example, the filtered LEDs I used were good at a factor of 4 (25 % PWM at 24 V) but burnt at a factor of 8 (12.5 % PWM at 48 V).</p>
 <p><img alt="direct led schematic" src="../images/hardware/direct_led_scm.png" /></p>
 <p><img alt="direct led wiring" src="../images/hardware/direct_led_wire.png" /></p>
 <h3 id="led-matrix">LED Matrix</h3>
-<p>A LED matrix can only be controlled by the Out_8x10 board. Like in the switch matrix every LED must have a diode in series. The LEDs are connected to the high-side and low-side switches of the Out_8x10 board. Be aware that you need a high supply voltage (20 V) for the matrix as the LEDs are only on for a short time.</p>
+<p>A LED matrix can only be controlled by the Out_8x10 board. Like in the switch matrix every LED must have a diode in series. The LEDs are connected to the high-side and low-side switches of the Out_8x10 board. Be aware that you need a high supply voltage (20 V) for the matrix as the LEDs are only on for a short time. Also be aware that the LEDs must have a filter (usually a resistor and capacitor) inside (called "flicker free" or likewise). See also chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
 <p>Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.</p>
 <p><img alt="led matrix schematic" src="../images/hardware/led_matrix_scm.png" /></p>
 <p><img alt="led matrix wiring" src="../images/hardware/led_matrix_wire.png" /></p>
 <h3 id="led-flasher">LED Flasher</h3>
-<p>Flashers are connected like direct LEDs. Use a mid power output or connect them like solenoids (with adjusted PWM value in the config file).</p>
+<p>Flashers are connected like direct LEDs. Use a mid power output or connect them like solenoids (with adjusted PWM value in the config file). See also chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
 <h3 id="general-illumination-gi">General Illumination (GI)</h3>
-<p>The GI (consisting of several LEDs in parallel) are usually connected like solenoids (with adjusted PWM value in the config file). But you can also use a mid power output (likewise the direct LEDs).</p>
+<p>The GI can be connected like direkt LEDs (consisting of several LEDs in parallel). Use mid power outputs or high power outputs. When using higher voltages with PWM make sure you also read chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
 <h3 id="controlled-led-strip">Controlled LED Strip</h3>
 <p>Controlled LED strips (e.g. with WS2812B LEDs) are daisy chained LEDs that can be individually controlled. To archive that each LED has a chip inside. Power supply is 5 V and the single data line is connected to a special terminal (#25).</p>
 <p>How much current for LED strips? No idea as there is no value in the data sheet. Just found this as a reference (36 mA per RGB-LED for WS2812B): <a href="https://suntechlite.com/power-consumption-of-ws2811-ws2812b-ws2813-ws2815-sk6812/">SunTech Lite</a></p>
@@ -1200,9 +1227,19 @@ icons & this code generated via https://realfavicongenerator.net
 <li>IO_16_8_1: set JP2 for termination. Set JP1 and JP3 for biasing.</li>
 <li>IO_16x8_matrix, Opto_16, Out_8x10: set JP1 for termination (no biasing possible)</li>
 </ul>
-<p>Use only exactly one bias network on the bus (no matter where). Terminate the bus at the geometrical start and at the geometrical end (not in between) and never add more than these two terminations.</p>
+<p>Use only exactly one bias network on the bus (no matter where). Terminate the bus at the start (usually an adapter connected to the PC or Raspberry Pi) and at the  end (the last board in line). Don't terminate in between and never add more than these two terminations.</p>
 <p><img alt="bus termination and bias" src="../images/hardware/bus_term_bias.png" /></p>
 <p>If you use a shielded cable you can connect the shield to the terminal called SHD. Shielding is not mandatory but twisted pair cable is recommended.</p>
+<h2 id="rs485-adapters">RS485 Adapters</h2>
+<p>To connect the bus to a PC or Raspberry Pi, usually an adapter from USB to RS485 is used.</p>
+<p><img alt="USB to RS485 adapter" src="../images/hardware/rs485adapter.jpg" /></p>
+<p>These adapters come with different chips to to the job, which can be a source of issues. Additionally the chips can be configured by the operating system regarding the timing and buffers. In many applications this configuration is set for a minimum load for the operating system. In our use case it should be set to perform a rather quick response (small buffers, low latency timing).  </p>
+<p>Here is an example of the an FTDI chip FT232B: it won't work because of the latency timing. This is set to 16 ms per default. When changed to 2 ms it works with PPUC.
+In Linux the setting can be changed in this device-file:<br />
+/sys/bus/usb-serial/devices/ttyUSB0/latency_timer<br />
+Just change the number from 16 to 2 with an text editor.</p>
+<p>Another example: with the chip ch341 no changes are needed.</p>
+<p>If you have more examples please let us know or write it down here.</p>
 <h2 id="thoughts-on-power-supply">Thoughts on Power Supply</h2>
 <p>It can kill you! Be aware that you work with deadly voltages, especially on the primary side. If you don't know exactly what you are doing, leave it and ask for help on this part. I repeat: it can kill you, no joke!</p>
 <p><img alt="high_voltage" src="../images/hardware/high_voltage_warning.png" /></p>
@@ -1355,7 +1392,8 @@ Is something wrong or missing? Is something out of date, or can you explain it b
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -1387,10 +1425,10 @@ Is something wrong or missing? Is something out of date, or can you explain it b
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
