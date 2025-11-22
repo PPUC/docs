@@ -111,7 +111,7 @@ For more details, visit the [ZeDMD page](https://github.com/PPUC/ZeDMD).
 
 ## PPUC/DMD
 
-PPUC/DMD is a replacement DMD for real pinball machines that is able to aply Serum v1 and v1 colorizations.
+PPUC/DMD is a replacement DMD for real pinball machines that is able to aply Serum v1 and v2 colorizations.
 It uses a ZeDMD for rendering.
 
 [![Watch the video](https://img.youtube.com/vi/snzCKHoTCRY/hqdefault.jpg)](https://youtu.be/snzCKHoTCRY)

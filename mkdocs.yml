@@ -104,4 +104,6 @@ nav:
     - ppuc_hardware/opto_16.md
   - ZeDMD:
     - zedmd/index.md
+  - PPUC/DMD:
+    - ppuc_dmd/index.md
   - GitHub Repositories: github_repos.md
