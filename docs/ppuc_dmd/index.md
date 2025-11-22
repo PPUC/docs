@@ -34,5 +34,8 @@ Updating the software of PPUC/DMD is rather simple. First, we will start by upda
 
 ### Updating DMDreader
 1. Get the latest file. This file is what will be uploaded to the RP2040 chip to flash the latest firmware. [Click this link to install.](https://github.com/PPUC/dmdreader/actions/runs/19395571634/artifacts/4578343442) Extract the zip file so that you are left with just `dmdreader.uf2`.
-
-2. 
+2. Grab a USB cable. For most this will be a USB-C to USB-A cable. Others might need Micro USB to USB-A. 
+3. Make sure game is turned off, in case of owning a REV1A or REV1B board, you must remove the Raspberry Pi Pico/RP2040 from the PPUC/DMD carrier PCB.
+4. On the RP2040/Pico microcontroller and the REV1C board, you'll find a button often labeled `BOOTSEL`. This button enables the software flashing mode. To enter this mode, hold down the `BOOTSEL` button while connecting the USB cable from your computer to the RP2040/Pico. Once connected, a folder should appear on your computer named something like `RP2…`.
+5. Drag and drop the `dmdreader.uf2` file in that folder, which was obtained in step 1. 
+6. End of DMDreader flashing. Remove USB cable and in cases of REV1A/B boards, plug the RP2040/Pico back into the PPUC/DMD carrier board. Make sure all pins line up correctly! 
