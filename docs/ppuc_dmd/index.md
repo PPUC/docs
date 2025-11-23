@@ -2,6 +2,23 @@
 
 PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real pinball machines. 
 
+## Releases
+
+>### 2025-11-23 - New PPUC/DMD and DMDreader version
+
+**PPUC/DMD [0.4.0]:**
+* Added support for the .cROMc format
+* Increased performance:
+    * Increased transmission of incoming frames
+    * Faster colorizing thanks to .cROMc
+    * Shorter colorization loading time thanks to .cROMc
+
+**DMDreader [0.4.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/tag/v0.4.0))
+* added Stern Whitestar support
+* added Data East support
+* added Sega support
+* increased performance, quicker transmission of frames
+
 ## The hardware components
 Currently the hardware consists out of 4 main components:
 
@@ -59,4 +76,4 @@ End of installation. Now plug your Micro SD card back into your Raspberry Pi. An
 ### Installing or updating a colorization file
 
 1. Installing a new colorization file is easy. Get the desired file, ideally a `.cROMc` file, `.cRZ` is also supported, though needs to be converted into a `.cROM` by extracting the `.cRZ` file as if it is a zip file. In all cases the final name of the file should be either `serum.cROMc` or `serum.cROM`. Case sensitivity matters here! __Failing to follow these guidelines will result in black and white DMD output.__
-2. When you have your file ready and waiting, open up the `colorizations` folder on your Micro SD card, then navigate to the `serum` folder. This is where you will place your `serum.cROMc` or `serum.cROM` file. Be sure to delete any previous files, or simply overwrite an existing one. You shouldn't have multiple files next to eachother in the `serum` folder. 
+2. When you have your file ready and waiting, open up the `colorizations` folder on your Micro SD card, then navigate to the `serum` folder. This is where you will place your `serum.cROMc` or `serum.cROM` file. Be sure to delete any previous files, or simply overwrite an existing one. You shouldn't have multiple files next to eachother in the `serum` folder.
