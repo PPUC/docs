@@ -58,7 +58,7 @@ Updating the software of PPUC/DMD is rather simple. What will be required for th
 First we will start off with updating DMDreader. Then updating ZeDMDos. Lastly there is a mini tutorial on how to install or update colorization files.
 
 ### Updating DMDreader
-1. Download the latest file. This file is what will be flashed  onto the RP2040 chip. [Click this link to download file.](https://drive.usercontent.google.com/uc?id=1a3X7LJjNwEYenm08rg9z6rdp6sjTPe5c&export=download) You should now have a file named `dmdreader.uf2` in your downloads folder.
+1. Download the latest file. This file is what will be flashed  onto the RP2040 chip. [Click this link to download file: DMDreader [0.4.0]](https://drive.usercontent.google.com/uc?id=1a3X7LJjNwEYenm08rg9z6rdp6sjTPe5c&export=download) You should now have a file named `dmdreader.uf2` in your downloads folder.
 2. Grab a USB cable. For most this will be a USB-C to USB-A cable. Others might need Micro USB to USB-A. 
 3. Make sure game is turned off, **WARNING: in case of owning a REV. 1A/B board, you must remove the Raspberry Pi Pico/RP2040 from the PPUC/DMD carrier PCB! The power trace is directly connected to the Rapsberry, so it NEEDS to be removed!** When owning a REV. 1C board you don't have to worry, you can lay the DMD down for easy access to the USB-C port.
 4. On the RP2040/Pico microcontroller and REV. 1C board, you'll find a button labeled `BOOTSEL`. This button enables software flashing mode. [Watch this video for a demonstration!](https://www.youtube.com/watch?v=os4mv_8jWfU) To enter this mode, hold down the `BOOTSEL` button while connecting the USB cable from your computer to the RP2040/Pico. Once connected, a folder should appear on your computer named `RP2-B2`.
@@ -69,7 +69,7 @@ First we will start off with updating DMDreader. Then updating ZeDMDos. Lastly t
 Updating ZeDMDos requires a bit more work compared to DMDreader.
 
 1. Take a look at your Raspberry Pi, this is the bigger green board which is upside down over to the left. There should be a specific number on there, ranging from 1-45. This number tells you which software file you need to install in step 2.
-2. Install the required files. [Click here to go to the folder!](https://www.youtube.com/watch?v=os4mv_8jWfU) Having kept the number from step 1 mind, go to the `ZeDMDos software files` folder and download `YourNumberHere.zip`. 
+2. Install the required files. [Click here to go to the folder! PPUC/DMD [0.4.0]](https://www.youtube.com/watch?v=os4mv_8jWfU) Having kept the number from step 1 mind, go to the `ZeDMDos software files` folder and download `YourNumberHere.zip`. 
 3. All colorization files have received an update which decreases the loading time marginally. From the `Colorizations` folder, click on the colorization of choice and download the `serum.cROMc` file. Keep this file as is and do not rename it.
 4. Take the Micro SD card out of your Raspberry Pi. __IMPORTANT: the supporter editions are hardware protected, you have to reuse the same SD card!__ Now get a MicroSD card reader, or a laptop which has the correct slot built in. Boot up your PC or laptop and insert the MicroSD card. [Click here for a video on how to update the ZeDMDos software!](https://drive.google.com/file/d/12rZP5NDtXh-hpvE5iITfu5ZzG9rINzXC/view)
 
