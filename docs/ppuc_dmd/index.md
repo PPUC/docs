@@ -7,6 +7,7 @@ PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real 
 >### 2025-11-23 - New PPUC/DMD and DMDreader version
 
 **PPUC/DMD [0.4.0]:**
+
 * Added support for the .cROMc format
 * Increased performance:
     * Increased transmission of incoming frames
@@ -14,6 +15,7 @@ PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real 
     * Shorter colorization loading time thanks to .cROMc
 
 **DMDreader [0.4.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/tag/v0.4.0))
+
 * added Stern Whitestar support
 * added Data East support
 * added Sega support
