@@ -21,7 +21,7 @@ You can see the commits and page builds in the [Actions tab](https://github.com/
 1. Clone the repo
 2. Open a terminal window and `cd` into the root folder of this repo
 3. `python3 -m venv venv`
-4. `source venv/bin/activate`
+4. `source venv/bin/activate` or `.\venv\Scripts\activate`
 3. `pip3 install -r requirements.txt` (to install mkdocs and what it needs)
 4. `mkdocs serve` (runs a local web server on port 8000)
 
