@@ -47,13 +47,16 @@ First we will start off with updating DMDreader. Then updating ZeDMDos. Lastly t
 6. End of DMDreader flashing. Remove USB cable and in cases of REV. 1A/B boards, plug the RP2040/Pico back into the PPUC/DMD carrier board. Make sure all pins line up correctly! 
 
 ### Updating ZeDMDos and installing or updating the colorization file
-Updating ZeDMDos requires a bit more work compared to DMDreader. Skip to step 5 when only wanting to install or update a colorization file
+Updating ZeDMDos requires a bit more work compared to DMDreader.
 
 1. Take a look at your Raspberry Pi, this is the bigger green board which is upside down over to the left. There should be a specific number on there, ranging from 1-45. This number tells you which software file you need to install in step 2.
 2. Install the required files. [Click here to go to the folder!](https://www.youtube.com/watch?v=os4mv_8jWfU) Having kept the number from step 1 mind, go to the `ZeDMDos software files` folder and download `YourNumberHere.zip`. 
 3. All colorization files have received an update which decreases the loading time marginally. From the `Colorizations` folder, click on the colorization of choice and download the `serum.cROMc` file. Keep this file as is and do not rename it.
 4. Take the Micro SD card out of your Raspberry Pi. __IMPORTANT: the supporter editions are hardware protected, you have to reuse the same SD card!__ Now get a MicroSD card reader, or a laptop which has the correct slot built in. Boot up your PC or laptop and insert the MicroSD card. [Click here for a video on how to update the ZeDMDos software!](https://drive.google.com/file/d/12rZP5NDtXh-hpvE5iITfu5ZzG9rINzXC/view)
-5. Installing a new colorization file is easy. Get the desired file, ideally a `.cROMc` file, `.cRZ` is also supported, though needs to be converted into a `.cROM` by extracting the `.cRZ` file as if it is a zip file. In all cases the final name of the file should be either `serum.cROMc` or `serum.cROM`. Case sensitivity matters here! __Failing to follow these guidelines will result in black and white DMD output.__
-6. When you have your file ready and waiting, open up the `colorizations` folder on your Micro SD card, then navigate to the `serum` folder. This is where you will place your `serum.cROMc` or `serum.cROM` file. Be sure to delete any previous files, or simply overwrite an existing one. You shouldn't have multiple files next to eachother in the `serum` folder. 
 
 End of installation. Now plug your Micro SD card back into your Raspberry Pi. And of course, boot up the game to see if all is well :)
+
+### Installing or updating a colorization file
+
+1. Installing a new colorization file is easy. Get the desired file, ideally a `.cROMc` file, `.cRZ` is also supported, though needs to be converted into a `.cROM` by extracting the `.cRZ` file as if it is a zip file. In all cases the final name of the file should be either `serum.cROMc` or `serum.cROM`. Case sensitivity matters here! __Failing to follow these guidelines will result in black and white DMD output.__
+2. When you have your file ready and waiting, open up the `colorizations` folder on your Micro SD card, then navigate to the `serum` folder. This is where you will place your `serum.cROMc` or `serum.cROM` file. Be sure to delete any previous files, or simply overwrite an existing one. You shouldn't have multiple files next to eachother in the `serum` folder. 
