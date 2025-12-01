@@ -4,7 +4,27 @@ PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real 
 
 ## Releases
 
->### 2025-11-23 - New PPUC/DMD and DMDreader version
+>### 2025-12-01 - New DMDreader version
+
+**DMDreader [0.5.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/))
+
+* fixed SPIKE frame detection
+* removed STDIO over USB support for easier updates (no BOOTSEL required)
+* added Arduino framework support
+* switched to platformio based builds
+* simplified clock count programs
+* blink while auto-detecting system using a 500ms interval
+* cleaned up buffer handling
+* use second core exclusively for SPI
+* added alphaDMD support for SAM and SPIKE
+
+IMPORTANT:
+
+* use dmdreader-ppucdmd.zip for PPUC/DMD
+* use dmdreader-alphadmd.zip for alphaDMD
+* dmdreader-ppucdmd2.zip is an experimental build for PPUC/DMD 2, which has not been released yet
+
+>### 2025-11-23 - New PPUC/DMD version
 
 **PPUC/DMD [0.4.0]:**
 
@@ -13,13 +33,6 @@ PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real 
     * Increased transmission of incoming frames
     * Faster colorizing thanks to .cROMc
     * Shorter colorization loading time thanks to .cROMc
-
-**DMDreader [0.4.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/tag/v0.4.0))
-
-* added Stern Whitestar support
-* added Data East support
-* added Sega support
-* increased performance, quicker transmission of frames
 
 ## The hardware components
 Currently the hardware consists out of 4 main components:
@@ -58,8 +71,8 @@ Updating the software of PPUC/DMD is rather simple. What will be required for th
 First we will start off with updating DMDreader. Then updating ZeDMDos. Lastly there is a mini tutorial on how to install or update colorization files.
 
 ### Updating DMDreader
-1. Download the latest file. This file is what will be flashed  onto the RP2040 chip. [Click this link to download file: DMDreader [0.4.0]](https://drive.usercontent.google.com/uc?id=1a3X7LJjNwEYenm08rg9z6rdp6sjTPe5c&export=download) You should now have a file named `dmdreader.uf2` in your downloads folder.
-2. Grab a USB cable. For most this will be a USB-C to USB-A cable. Others might need Micro USB to USB-A. 
+1. Download `dmdreader-ppucdmd.zip`. [Click here to go to the latest release!](https://github.com/PPUC/dmdreader/releases/). Check your downloads folder and unzip/unpack. You should see a file named `dmdreader-ppucdmd.uf2` in the extracted folder. This file is what will be flashed onto the RP2040 chip.
+2. Grab a USB cable. For most this will be a USB-C to USB-A cable. Others might need Micro USB to USB-A.
 3. Make sure game is turned off, **WARNING: in case of owning a REV. 1A/B board, you must remove the Raspberry Pi Pico/RP2040 from the PPUC/DMD carrier PCB! The power trace is directly connected to the Rapsberry, so it NEEDS to be removed!** When owning a REV. 1C board you don't have to worry, you can lay the DMD down for easy access to the USB-C port.
 4. On the RP2040/Pico microcontroller and REV. 1C board, you'll find a button labeled `BOOTSEL`. This button enables software flashing mode. [Watch this video for a demonstration!](https://www.youtube.com/watch?v=os4mv_8jWfU) To enter this mode, hold down the `BOOTSEL` button while connecting the USB cable from your computer to the RP2040/Pico. Once connected, a folder should appear on your computer named `RP2-B2`.
 5. Drag and drop the `dmdreader.uf2` file into that folder, which was obtained in step 1. Wait a few seconds until the `RP2-B2` folder closes. 
