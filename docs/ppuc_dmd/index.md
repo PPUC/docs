@@ -6,7 +6,7 @@ PPUC-DMD is a ZeDMD capable of displaying Serum v1 and v2 colorizations on real 
 
 >### 2025-12-01 - New DMDreader version
 
-**DMDreader [0.5.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/))
+**DMDreader [0.5.0]:** ([Link to official release](https://github.com/PPUC/dmdreader/releases/tag/v0.5.0))
 
 * fixed SPIKE frame detection
 * removed STDIO over USB support for easier updates (no BOOTSEL required)
@@ -71,7 +71,7 @@ Updating the software of PPUC/DMD is rather simple. What will be required for th
 First we will start off with updating DMDreader. Then updating ZeDMDos. Lastly there is a mini tutorial on how to install or update colorization files.
 
 ### Updating DMDreader
-1. Download `dmdreader-ppucdmd.zip`. [Click here to go to the latest release!](https://github.com/PPUC/dmdreader/releases/). Check your downloads folder and unzip/unpack. You should see a file named `dmdreader-ppucdmd.uf2` in the extracted folder. This file is what will be flashed onto the RP2040 chip.
+1. Download `dmdreader-ppucdmd.zip`. [Click here to go to the latest release!](https://github.com/PPUC/dmdreader/releases/latest). Check your downloads folder and unzip/unpack. You should see a file named `dmdreader-ppucdmd.uf2` in the extracted folder. This file is what will be flashed onto the RP2040 chip.
 2. Grab a USB cable. For most this will be a USB-C to USB-A cable. Others might need Micro USB to USB-A.
 3. Make sure game is turned off, **WARNING: in case of owning a REV. 1A/B board, you must remove the Raspberry Pi Pico/RP2040 from the PPUC/DMD carrier PCB! The power trace is directly connected to the Rapsberry, so it NEEDS to be removed!** When owning a REV. 1C board you don't have to worry, you can lay the DMD down for easy access to the USB-C port.
 4. On the RP2040/Pico microcontroller and REV. 1C board, you'll find a button labeled `BOOTSEL`. This button enables software flashing mode. [Watch this video for a demonstration!](https://www.youtube.com/watch?v=os4mv_8jWfU) To enter this mode, hold down the `BOOTSEL` button while connecting the USB cable from your computer to the RP2040/Pico. Once connected, a folder should appear on your computer named `RP2-B2`.
