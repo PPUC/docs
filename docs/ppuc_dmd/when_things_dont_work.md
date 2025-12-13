@@ -29,11 +29,19 @@ See ["Updating DMDreader"](https://ppuc.github.io/docs/ppuc_dmd/#updating-dmdrea
 ### Issue #3 - Debugging the Pico
 The fix from above did not seem to solve anything, so at this point logging into the Pi to gain more knowledge about what is really going on with the communication is the only way, as the Pi sort of sits in-between the Pico and the ESP32-S3, this is the only way. 
 
-Step 1: Turn of the pinball machine and take out the MicroSD card from the Raspberry Pi, insert it into your PC with a MicroSD card reader or whatever else works. 
+Step 1: Turn off the pinball machine and take out the MicroSD card from the Raspberry Pi, insert it into your PC with a MicroSD card reader or whatever else works.
+
 Step 2: Upon loading the contents of the MicroSD, navigate to the folder "configs" click on the folder, you should see two files: `ppuc-dmd.ini` and `zedmdos.ini`. We will be opening the `zedmdos.ini` file. So double click on the file.
 You should see the following contents, arrows have been placed where you need to fill out specific entires. 
 
 ![zedmdos-ini](../images/ppuc-dmd/zedmdos-ini.png)
 
-Step 3: Having filled in your specific settings in the file, save it and insert the MicroSD card back into your game. Now boot the game and figure out on what IP the Pi is running, often it will show up as a "*" for its name. 
-Step 4: With the IP figured out ssh into it, the username when prompted is `root`, the password is `linux`. When entered correctly, you should successfully be in the command line. 
+Step 3: Having filled in your specific settings in the file, save it and insert the MicroSD card back into your game. Now boot the game and figure out what IP has been assigned to the Pi, often it will show up as a "*" for its name.
+
+Step 4: With the IP figured out ssh into it, the username when prompted is `root`, the password is `linux`. When entered correctly, you should successfully be in the command line.
+
+Step 5: Once logged into the Pi, you need to execute the following command: `/etc/init.d/S50ppuc-dmd stop` and afterwards: `/usr/bin/ppuc-dmd -d`. What this will do is it will turn on logging and tell you if the Pi is receiving frame data from the smaller Pico. If data is being received, a log similar to what is seen below will be put out in the terminal of the Pi:
+
+![Pi](../images/ppuc-dmd/pi-frame-logging.png)
+
+If nothing is being reported at this point, there is a chance your Pico is unresponsive. This could either mean it is defective, or incorrect DMDreader firmware is installed.
