@@ -106,4 +106,5 @@ nav:
     - zedmd/index.md
   - PPUC/DMD:
     - ppuc_dmd/index.md
+    - ppuc_dmd/when_things_dont_work.md
   - GitHub Repositories: github_repos.md
