@@ -2,7 +2,7 @@
 [![Discord](https://img.shields.io/discord/759478464733642814.svg?logo=discord&logoColor=white&color=5865F2&label=Discord)](https://discord.gg/fkkk4MbBn5)
 
 The Pinball Power-Up Controller software and hardware family is designed to enhance the capabilities of classic pinball
-machines, mainly of the 80s and 90s, to repair broken machines and to drive the hardware of home brew pinball machines.
+machines, mainly of the late 70s, 80s, 90s, up to the early 2000s, to repair broken machines and to drive the hardware of home brew pinball machines.
 
 [![Watch the video](https://img.youtube.com/vi/-LGO8dxLg2c/hqdefault.jpg)](https://youtu.be/-LGO8dxLg2c)
 *Click the image to watch the video on YouTube.*
@@ -14,7 +14,7 @@ The first PPU Controller was designed to enhance existing machines. It is able t
 and solenoids and to trigger and distribute corresponding *events* to attached sub-systems.
 It is possible to monitor DMD and sound commands, too.
 
-Sub-system like the built-in EffectController are able to drive additional LEDs, motors, and coils.
+Sub-systems like the built-in EffectController are able to drive additional LEDs, motors, and coils.
 Other sub-systems could be video players or audio systems. The additional effects are bundled per pinball machine in
 so-called *Pinball Power-Ups* (PPUs).
 
@@ -23,10 +23,14 @@ communicating with the controllers. The target is to use the VPX Standalone scri
 
 A special variation of that "CPU" is suitable as replacement for a broken CPU of an existing machine.
 That development started as part of the [PinMAME project](https://github.com/vpinball/pinmame/tree/master/src/ppuc).
-Nowadays it is a standalone programm that leverages libpinmame: https://github.com/PPUC/ppuc
+Nowadays it is a standalone programm that leverages libpinmame: (https://github.com/PPUC/ppuc)
 
-As a sub-project ZeDMD has been created to emulate a real DMD for virtual pinball machines and to be used with as
-replacement in real machines.
+As a sub-project ZeDMD has been created to emulate a real DMD for virtual pinball machines. To be used with as
+replacement in real machines, the concept got extended by some parts to read the original DMD signal and to apply Serum colorizations to it.
+The name for this solution is _PPUC/DMD_.
+
+[![Watch the video](https://img.youtube.com/vi/U_8ic-G24y4/hqdefault.jpg)](https://youtu.be/U_8ic-G24y4)
+*Click the image to watch the video on YouTube.*
 
 To get involved in the development or to discuss your PPUC project, join us on [Discord](https://discord.gg/fkkk4MbBn5).
 
@@ -95,9 +99,9 @@ You would have all capabilities like PUP Packs, FlexDMD, etc.
 
 ## Licence
 
-The code is licenced under GPLv3. Be aware of the fact that your own *Pinball Power-Ups* (PPUs) need to be licenced
-under a compatible licence.
-That doesn't prevent any commercial use, but you need to respect the terms and conditions of GPLv3!
+The published code is licenced under GPLv2 or GPLv3 (take a look at the different PPUX sub-projects for details).
+Be aware of the fact that your own *Pinball Power-Ups* (PPUs) need to be licenced under a compatible licence.
+That doesn't prevent any commercial use, but you need to respect the terms and conditions of GPL!
 
 We would appreciate contributions to PPUC itself or as game-specific PPUs.
 
@@ -125,5 +129,6 @@ Some libraries and sub-projects that are also leveraged by others are hosted as 
 - [libzedmd](https://github.com/PPUC/libzedmd)
 - [libpupdmd](https://github.com/PPUC/libpupdmd)
 - [libframeutil](https://github.com/PPUC/libframeutil)
-- [libserum (concentrate)](https://github.com/PPUC/libserum_concentrate)
+- [libserum](https://github.com/PPUC/libserum)
+- ...
 
