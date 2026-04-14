@@ -25,7 +25,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -33,7 +33,7 @@ icons & this code generated via https://realfavicongenerator.net
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1151,7 +1151,7 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="ppuc-ppucdmd-and-zedmd">PPUC, PPUC/DMD and ZeDMD</h1>
 <p><a href="https://discord.gg/fkkk4MbBn5"><img alt="Discord" src="https://img.shields.io/discord/759478464733642814.svg?logo=discord&amp;logoColor=white&amp;color=5865F2&amp;label=Discord" /></a></p>
 <p>The Pinball Power-Up Controller software and hardware family is designed to enhance the capabilities of classic pinball
-machines, mainly of the 80s and 90s, to repair broken machines and to drive the hardware of home brew pinball machines.</p>
+machines, mainly of the late 70s, 80s, 90s, up to the early 2000s, to repair broken machines and to drive the hardware of home brew pinball machines.</p>
 <p><a href="https://youtu.be/-LGO8dxLg2c"><img alt="Watch the video" src="https://img.youtube.com/vi/-LGO8dxLg2c/hqdefault.jpg" /></a>
 <em>Click the image to watch the video on YouTube.</em></p>
 <p>Meanwhile the PPUC family has grown and the hard and software covers various use-cases, like modding a pinball machine,
@@ -1159,16 +1159,19 @@ repairing a pinball machine or to drive homebrew pinball machines.</p>
 <p>The first PPU Controller was designed to enhance existing machines. It is able to monitor all playfield switches, lights,
 and solenoids and to trigger and distribute corresponding <em>events</em> to attached sub-systems.
 It is possible to monitor DMD and sound commands, too.</p>
-<p>Sub-system like the built-in EffectController are able to drive additional LEDs, motors, and coils.
+<p>Sub-systems like the built-in EffectController are able to drive additional LEDs, motors, and coils.
 Other sub-systems could be video players or audio systems. The additional effects are bundled per pinball machine in
 so-called <em>Pinball Power-Ups</em> (PPUs).</p>
 <p>For homebrew machines there will be additional software to act as "CPU", running the game logic aka rules and
 communicating with the controllers. The target is to use the VPX Standalone script engine and the VPX Standalone ecosytem.</p>
 <p>A special variation of that "CPU" is suitable as replacement for a broken CPU of an existing machine.
 That development started as part of the <a href="https://github.com/vpinball/pinmame/tree/master/src/ppuc">PinMAME project</a>.
-Nowadays it is a standalone programm that leverages libpinmame: https://github.com/PPUC/ppuc</p>
-<p>As a sub-project ZeDMD has been created to emulate a real DMD for virtual pinball machines and to be used with as
-replacement in real machines.</p>
+Nowadays it is a standalone programm that leverages libpinmame: (https://github.com/PPUC/ppuc)</p>
+<p>As a sub-project ZeDMD has been created to emulate a real DMD for virtual pinball machines. To be used with as
+replacement in real machines, the concept got extended by some parts to read the original DMD signal and to apply Serum colorizations to it.
+The name for this solution is <em>PPUC/DMD</em>.</p>
+<p><a href="https://youtu.be/U_8ic-G24y4"><img alt="Watch the video" src="https://img.youtube.com/vi/U_8ic-G24y4/hqdefault.jpg" /></a>
+<em>Click the image to watch the video on YouTube.</em></p>
 <p>To get involved in the development or to discuss your PPUC project, join us on <a href="https://discord.gg/fkkk4MbBn5">Discord</a>.</p>
 <h2 id="motivation">Motivation</h2>
 <p>We want to enable people to be creative and to modernize old pinball machines using today's technology.
@@ -1214,9 +1217,9 @@ You would have all capabilities like PUP Packs, FlexDMD, etc.</p>
 <em>Click the image to watch the video on YouTube.</em></p>
 <p><img alt="Overview pic" src="images/hardware/overview.png" /></p>
 <h2 id="licence">Licence</h2>
-<p>The code is licenced under GPLv3. Be aware of the fact that your own <em>Pinball Power-Ups</em> (PPUs) need to be licenced
-under a compatible licence.
-That doesn't prevent any commercial use, but you need to respect the terms and conditions of GPLv3!</p>
+<p>The published code is licenced under GPLv2 or GPLv3 (take a look at the different PPUX sub-projects for details).
+Be aware of the fact that your own <em>Pinball Power-Ups</em> (PPUs) need to be licenced under a compatible licence.
+That doesn't prevent any commercial use, but you need to respect the terms and conditions of GPL!</p>
 <p>We would appreciate contributions to PPUC itself or as game-specific PPUs.</p>
 <h2 id="zedmd">ZeDMD</h2>
 <p>ZeDMD is a "real" DMD for pinball emulations and other use cases, developed as part of the PPUC project.
@@ -1235,7 +1238,8 @@ Some libraries and sub-projects that are also leveraged by others are hosted as 
 <li><a href="https://github.com/PPUC/libzedmd">libzedmd</a></li>
 <li><a href="https://github.com/PPUC/libpupdmd">libpupdmd</a></li>
 <li><a href="https://github.com/PPUC/libframeutil">libframeutil</a></li>
-<li><a href="https://github.com/PPUC/libserum_concentrate">libserum (concentrate)</a></li>
+<li><a href="https://github.com/PPUC/libserum">libserum</a></li>
+<li>...</li>
 </ul>
 <hr />
 <div class="admonition question">
@@ -1361,10 +1365,10 @@ Is something wrong or missing? Is something out of date, or can you explain it b
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
