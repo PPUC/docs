@@ -1,0 +1,336 @@
+/* ppuc.org landing page (hub layout): PPUC, the umbrella project, fills the main area in yellow/black like
+   the docs; PPUC/DMD, its featured product, is a teal neon band along the bottom of the first screen.
+   Only buttons and links are clickable. This file also styles the 404 page (bottom). */
+
+:root {
+  --ppuc-yellow: #ffff00;
+  --ppuc-yellow-bg: #f0ee00;   /* slightly toned-down yellow for the large landing area */
+  --ppuc-red: #d63e29;
+  --ink: #000;
+  --dmd-bg: #051115;
+  --dmd-cyan: #3ee8ff;
+  --dmd-yellow: #ffe31a;
+  --dmd-text: #d3e8ed;
+  --dmd-muted: #8eacb3;
+  --slant: 44px;               /* height of the slanted top edge of the PPUC/DMD band */
+  --hex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%2350e1ff' stroke-opacity='0.12' stroke-width='0.45'/%3E%3C/svg%3E");
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--dmd-bg);
+  font: 400 16px/1.6 "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; }
+
+:focus-visible { outline: 3px solid var(--ppuc-red); outline-offset: 3px; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.hub {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* ---------- PPUC: the main area ---------- */
+
+.hub-ppuc {
+  position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 24px calc(var(--slant) + 48px);
+  background: var(--ppuc-yellow-bg);
+  color: var(--ink);
+}
+.hub-ppuc-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/traces.svg") 0 0 / 480px 480px;   /* circuit-board traces, seamless 480px tile */
+  pointer-events: none;
+}
+
+.hub-ppuc-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: 760px;
+  text-align: center;
+}
+
+/* The PPUC icon with a large "PPUC" below it. */
+.hub-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font: 700 clamp(52px, 5vw, 72px)/1 "Oswald", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hub-logo { width: 140px; height: 140px; }
+
+.hub-sub {
+  margin: 4px 0 0;
+  font: 600 1.05rem/1.3 "Oswald", sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.hub-text { max-width: 48ch; margin: 0; color: rgba(0, 0, 0, 0.78); }
+
+.hub-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 14px 28px;
+  font: 600 1rem/1 "Oswald", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ppuc-yellow);
+  background: var(--ink);
+  border-radius: 3px;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+.hub-cta:hover, .hub-cta:focus-visible { background: var(--ppuc-red); color: #fff; transform: translateY(-2px); }
+
+.hub-topics { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 18px; }
+.hub-topics-label {
+  font: 600 0.8rem/1.3 "Oswald", sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+.hub-topics ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.hub-topics a {
+  display: block;
+  padding: 7px 14px;
+  font: 600 0.85rem/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1.5px solid rgba(0, 0, 0, 0.55);
+  border-radius: 3px;
+  background: rgba(240, 238, 0, 0.75);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.hub-topics a:hover, .hub-topics a:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--ppuc-yellow); }
+
+/* GitHub / Discord, top right */
+.hub-community { position: absolute; top: 20px; right: 24px; z-index: 1; display: flex; gap: 8px; }
+.hub-community a {
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ppuc-yellow);
+  text-decoration: none;
+  background: var(--ink);
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.hub-community a:hover, .hub-community a:focus-visible { background: var(--ppuc-red); color: #fff; }
+
+/* ---------- PPUC/DMD: the featured band ---------- */
+
+.hub-dmd {
+  position: relative;
+  margin-top: calc(var(--slant) * -1);
+  padding: calc(var(--slant) + 30px) 24px 36px;
+  color: var(--dmd-text);
+  /* slanted top edge, rising to the right */
+  clip-path: polygon(0 var(--slant), 100% 0, 100% 100%, 0 100%);
+  background: var(--dmd-bg);
+}
+.hub-dmd-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 90% at 30% 60%, rgba(40, 160, 180, 0.22), transparent 70%),
+    var(--hex) 0 0 / 168px 300px;
+  pointer-events: none;
+}
+/* thin neon line along the slant */
+.hub-dmd::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(62, 232, 255, 0.15), rgba(62, 232, 255, 0.85) 50%, rgba(255, 227, 26, 0.6));
+  clip-path: polygon(0 var(--slant), 100% 0, 100% 2px, 0 calc(var(--slant) + 2px));
+  pointer-events: none;
+}
+
+.hub-dmd-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 420px) max-content;   /* panels never shrink; the text column gives way */
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 3vw, 48px);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Centred, so the space to the panel on either side is the same. */
+.hub-dmd-body { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.hub-dmd-sub {
+  margin: 0;
+  font: 700 0.85rem/1.3 "Orbitron", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dmd-cyan);
+  text-shadow: 0 0 12px rgba(62, 232, 255, 0.55);
+}
+.hub-dmd-text { margin: 0; color: var(--dmd-muted); }
+.hub-dmd-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  padding: 13px 26px;
+  font: 700 0.82rem/1 "Orbitron", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  background: var(--dmd-yellow);
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(255, 227, 26, 0.45);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.hub-dmd-cta:hover, .hub-dmd-cta:focus-visible { box-shadow: 0 0 40px rgba(255, 227, 26, 0.7); transform: translateY(-2px); }
+.hub-dmd a:focus-visible { outline-color: var(--dmd-cyan); }
+
+/* The two display panels (PPUC/DMD and ZeDMD): identical size, bezel, label and glow. */
+.hub-panel { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.hub-panel-label, .hub-panel-title { margin: 0; }
+.hub-panel-label {
+  font: 700 0.68rem/1.3 "Orbitron", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dmd-muted);
+}
+.hub-panel a { display: block; border-radius: 8px; }
+.hub-panel img {
+  display: block;
+  width: 256px;
+  height: 64px;
+  object-fit: cover;
+  padding: 6px;
+  box-sizing: content-box;
+  background: #000;
+  border: 1px solid rgba(80, 225, 255, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(62, 232, 255, 0.16);
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+.hub-panel--zedmd img { image-rendering: pixelated; }   /* native 256x64 pixel art stays crisp */
+.hub-panel a:hover img, .hub-panel a:focus-visible img { border-color: rgba(80, 225, 255, 0.45); box-shadow: 0 0 32px rgba(62, 232, 255, 0.3); }
+
+/* ---------- Responsive ---------- */
+
+/* Short desktop screens (e.g. 1280x720): a more compact layout keeps the PPUC/DMD band on the first screen. */
+@media (min-width: 1001px) and (max-height: 820px) {
+  .hub-ppuc { padding-top: 48px; padding-bottom: calc(var(--slant) + 24px); }
+  .hub-ppuc-inner { gap: 10px; }
+  .hub-title { font-size: 46px; gap: 4px; }
+  .hub-logo { width: 84px; height: 84px; }
+  .hub-cta { margin-top: 6px; }
+  .hub-topics { margin-top: 8px; }
+  .hub-dmd { padding-top: calc(var(--slant) + 18px); padding-bottom: 22px; }
+}
+
+/* Medium screens: text and button first, the two panels side by side below. */
+@media (max-width: 1000px) {
+  .hub-dmd-inner { grid-template-columns: auto auto; justify-content: center; gap: 24px 40px; }
+  .hub-dmd-body { grid-column: 1 / -1; grid-row: 1; align-items: center; text-align: center; max-width: 520px; justify-self: center; }
+}
+
+/* Phones: PPUC content stacked; in the PPUC/DMD band the text comes first and the two panels stay side by
+   side, each scaled to half the width. */
+@media (max-width: 800px) {
+  :root { --slant: 28px; }
+  .hub-ppuc { padding: 76px 16px calc(var(--slant) + 40px); }
+  .hub-community { top: 16px; right: 50%; transform: translateX(50%); }
+  .hub-title { font-size: 44px; gap: 4px; }
+  .hub-logo { width: 96px; height: 96px; }
+  .hub-dmd { padding: calc(var(--slant) + 28px) 16px 40px; }
+  .hub-dmd-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 12px; }
+  .hub-panel { min-width: 0; gap: 8px; }
+  /* Labels on two balanced lines ("For real / pinball as"), bottom-aligned so both panels line up. */
+  .hub-panel-label {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 2.7em;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    text-align: center;
+    text-wrap: balance;
+    max-width: 11em;   /* both labels wrap the same way: "For real / pinball as" */
+  }
+  .hub-panel a { width: 100%; max-width: 256px; }
+  .hub-panel img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 1;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .hub-panel--zedmd img { image-rendering: auto; }   /* scaled below its native size: smooth looks better */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* ---------- 404 ---------- */
+
+.notfound {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 24px 16px;
+  background:
+    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.035) 0 2px, transparent 2px 16px),
+    var(--ppuc-yellow);
+  color: var(--ink);
+  text-align: center;
+}
+.notfound h1 { margin: 16px 0 8px; font: 700 clamp(2rem, 6vw, 3.2rem)/1.1 "Oswald", sans-serif; text-transform: uppercase; }
+.notfound p { margin: 0 0 8px; }
+.notfound-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px !important; }
+.notfound-links a {
+  padding: 12px 22px;
+  font: 600 0.95rem/1 "Oswald", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ppuc-yellow);
+  background: var(--ink);
+  border-radius: 3px;
+  text-decoration: none;
+}
+.notfound-links a:hover { background: var(--ppuc-red); color: #fff; }

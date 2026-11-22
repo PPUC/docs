@@ -1,0 +1,40 @@
+# ppuc.org root website: the landing page (choose PPUC Docs or PPUC/DMD).
+# The PPUC documentation is a separate MkDocs project (../mkdocs.yml) that is built into /docs/ of the same output.
+# Build everything with `python build.py` from the repository root.
+
+site_name: PPUC
+site_url: https://ppuc.github.io/docs/
+site_description: Pinball Power-Up Controller & DMD (PPUC) is a free and open-source pinball controller and display system.
+docs_dir: pages
+# build.py builds this project into a temporary folder and copies it into out/ next to out/docs/.
+# This site_dir is only used when running `mkdocs build -f website/mkdocs.yml` by hand.
+site_dir: ../site
+use_directory_urls: true
+strict: true
+
+theme:
+  name: null
+  custom_dir: theme
+  static_templates:
+    - 404.html
+
+plugins: []
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      title: On this page
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+
+validation:
+  links:
+    # Links to /docs/ point into the documentation build, which this project cannot see.
+    unrecognized_links: ignore
+
+extra:
+  discord: https://discord.gg/fkkk4MbBn5
+  github: https://github.com/PPUC
+
