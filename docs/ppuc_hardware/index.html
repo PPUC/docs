@@ -1,0 +1,1673 @@
+<!-- Adds links to various favicons. Details here:
+https://squidfunk.github.io/mkdocs-material/customization/#overriding-blocks
+icons & this code generated via https://realfavicongenerator.net
+-->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Pinball Power-Up Controller & DMD (PPUC) is a free and open-source pinball controller and display system.">
+      
+      
+      
+        <link rel="canonical" href="https://ppuc.github.io/docs/docs/ppuc_hardware/">
+      
+      
+        <link rel="prev" href="../ppuc/how_to_run/">
+      
+      
+        <link rel="next" href="io_16_8_1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>PPUC Hardware - Pinball Power-Up Controller & DMD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/ppuc.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+<link rel="icon" type="image/png" href="../images/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg" />
+<link rel="shortcut icon" href="../images/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../images/icons/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="PPUC" />
+<link rel="manifest" href="../images/icons/site.webmanifest" />
+<meta name="theme-color" content="#ffff00">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ppuc-hardware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pinball Power-Up Controller &amp; DMD" class="md-header__button md-logo" aria-label="Pinball Power-Up Controller & DMD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pinball Power-Up Controller & DMD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PPUC Hardware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PPUC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PPUC on GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pinball Power-Up Controller &amp; DMD" class="md-nav__button md-logo" aria-label="Pinball Power-Up Controller & DMD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Pinball Power-Up Controller & DMD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/PPUC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PPUC on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ppuc/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PPUC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PPUC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppuc/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppuc/config_tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppuc/build_from_source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build from Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppuc/how_to_run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run PPUC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PPUC Hardware
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PPUC Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io_16_8_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IO_16_8_1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io_16x8_matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IO_16x8_matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="out_8x10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Out_8x10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="opto_16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Opto_16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../zedmd/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZeDMD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ZeDMD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ppuc_dmd/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PPUC/DMD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PPUC/DMD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppuc_dmd/when_things_dont_work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    When things don't work (Supporter Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github_repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Repositories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-used-for-a-pinball-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Used for a Pinball Machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Used for a Pinball Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electronics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solenoids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solenoids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-hardware-of-the-ppuc-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specific Hardware of the PPUC Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect-ppuc-pcbs-with-pinball-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Connect PPUC-PCBs With Pinball Parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Connect PPUC-PCBs With Pinball Parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solenoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solenoid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct LED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direct LED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwm-and-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM and LEDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-flasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Flasher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-illumination-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Illumination (GI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlled-led-strip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlled LED Strip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optical-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optical Switches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sound
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect-ppuc-pcbs-with-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Connect PPUC-PCBs With Each Other
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rs485-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RS485 Adapters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thoughts-on-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thoughts on Power Supply
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thoughts on Power Supply">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-v-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 V Supply:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-v-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        48 V Supply:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-v-for-led-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20 V for LED Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-for-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power for Audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting it All Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/PPUC/docs/blob/main/docs/ppuc_hardware/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m263.4-27 14.8 36.8L315 24.6c3 1.2 5 4.2 5 7.4s-2 6.2-5 7.4l-36.8 14.8L263.4 91c-1.2 3-4.2 5-7.4 5s-6.2-2-7.4-5l-14.8-36.8L197 39.4c-3-1.2-5-4.2-5-7.4s2-6.2 5-7.4l36.8-14.8L248.6-27c1.2-3 4.2-5 7.4-5s6.2 2 7.4 5M110.7 41.7l21.5 50.1 50.1 21.5c5.9 2.5 9.7 8.3 9.7 14.7s-3.8 12.2-9.7 14.7l-50.1 21.5-21.5 50.1c-2.5 5.9-8.3 9.7-14.7 9.7s-12.2-3.8-14.7-9.7l-21.5-50.1-50.1-21.5C3.8 140.2 0 134.4 0 128s3.8-12.2 9.7-14.7l50.1-21.5 21.5-50.1C83.8 35.8 89.6 32 96 32s12.2 3.8 14.7 9.7M464 304c6.4 0 12.2 3.8 14.7 9.7l21.5 50.1 50.1 21.5c5.9 2.5 9.7 8.3 9.7 14.7s-3.8 12.2-9.7 14.7l-50.1 21.5-21.5 50.1c-2.5 5.9-8.3 9.7-14.7 9.7s-12.2-3.8-14.7-9.7l-21.5-50.1-50.1-21.5c-5.9-2.5-9.7-8.3-9.7-14.7s3.8-12.2 9.7-14.7l50.1-21.5 21.5-50.1c2.5-5.9 8.3-9.7 14.7-9.7M460 0c11 0 21.6 4.4 29.5 12.2l42.3 42.3C539.6 62.4 544 73 544 84s-4.4 21.6-12.2 29.5l-88.2 88.2-101.3-101.3 88.2-88.2C438.4 4.4 449 0 460 0M44.2 398.5l264.2-264.2 101.3 101.3-264.2 264.2C137.6 507.6 127 512 116 512s-21.6-4.4-29.5-12.2l-42.3-42.3C36.4 449.6 32 439 32 428s4.4-21.6 12.2-29.5"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ppuc-hardware">PPUC Hardware</h1>
+<p>When we talk about hardware, we actually often mean the PCBs (printed circuit boards) of the PPUC project. Of course there is more hardware in a pinball machine that is somehow all connected to each other (like solenoids, lamps, power supply, ...).</p>
+<p>EM (electro mechanical) machines are not covered here (although you could pimp them up with electronics).</p>
+<p>Virtual pinball machines can profit from PPUC. You can make them much more interesting with this hardware but this article concentrates on building real pinball machines.</p>
+<p>After reading this article you should have an understanding of</p>
+<ul>
+<li>what hardware is needed for a pinball machine</li>
+<li>what specific hardware of the PPUC project is available</li>
+<li>how PPUC and other hardware is connected and wired</li>
+<li>which wires are needed</li>
+<li>how the PCBs are connected to each other</li>
+<li>how much power is needed</li>
+<li>what kind of power supply can be used</li>
+<li>how many PCBs are needed</li>
+</ul>
+<h2 id="hardware-used-for-a-pinball-machine">Hardware Used for a Pinball Machine</h2>
+<p>To build a pinball machine you usually need some stuff. Here are the most important things.</p>
+<p>You find tons of information here: <a href="https://www.pinwiki.com">PinWiki</a></p>
+<h3 id="electronics">Electronics</h3>
+<p>These are the PCBs that drive the solenoids, reads the switches, runs the software and lights the bulbs. They also take care of the correct power supply and voltages for the parts.</p>
+<p><img alt="backbox electronics" src="../images/hardware/bb_electronics.png" /></p>
+<h3 id="solenoids">Solenoids</h3>
+<p>These are used for mechanical action. They are made of a coil of wire and a metal plunger. When electricity flows through the coil, it generates a magnetic field that pulls or pushes the plunger and thereby makes a linear motion.</p>
+<p><img alt="solenoid with plunger" src="../images/hardware/solenoid_w_plunger.png" /></p>
+<h3 id="switches">Switches</h3>
+<p>Switches recognizes where the balls are at the moment or what state an actor is in. They can be directly wired to an input or (to save wires and ports) they can be wired as a matrix (e.g. 8x8 -&gt; 64 switches done with 16 ports). Matrix concept is more complex and need diodes at the switches. Switches can be mechanical or optical.</p>
+<p><img alt="leaf switch" src="../images/hardware/leaf_switch.png" /></p>
+<p><img alt="micro switch" src="../images/hardware/micro_switch.png" /></p>
+<h3 id="lamps">Lamps</h3>
+<p>These are used for bling bling. They light the inserts (bottom of playfield), the general illumination (GI) on top of the playfield and they are used for special effects like flashers. The flashers are typically lit only for less than a second. They have higher power and voltage than bulbs for GI and inserts. Nowadays LEDs are used for lamps and flashers but in older machines incandescent light bulb were used. Like the switches the lamps can be controlled directly (one by one) or in a lamp matrix arrangement.</p>
+<p><img alt="incandescent bulb" src="../images/hardware/incandescent_bulb.png" /></p>
+<p><img alt="LED flasher" src="../images/hardware/led_flasher.png" /> <img alt="alt text" src="../images/hardware/led_baj.jpg" /></p>
+<h3 id="display">Display</h3>
+<p>Used to display the score, rules, video modes and animations.</p>
+<ul>
+<li>Nowadays TFT (thin film transistor) technology is used (well known from computer monitors).</li>
+<li>In the 90s DMD (dot matrix display) was the main technology. That is a monochrome (orange on black) display with a typical resolution of 128x32 pixels.</li>
+<li>Earlier machines uses 7 (or more) segment displays</li>
+</ul>
+<p><img alt="dmd" src="../images/hardware/dmd.png" /></p>
+<p><img alt="segment display" src="../images/hardware/segment_display.png" /></p>
+<h3 id="audio">Audio</h3>
+<p>To get some sound to your ears several speakers are used with an amplifier that is usually part of the electronics PCBs.</p>
+<h2 id="specific-hardware-of-the-ppuc-project">Specific Hardware of the PPUC Project</h2>
+<p>We designed some specific PCBs for PPUC project although they might be useful in other applications as well. Here is an overview what is available and what they can do. Fore more information there is a detailed description available for each PCB.</p>
+<ul>
+<li><a href="./io_16_8_1/">IO_16_8_1</a>: most basic PCB, always needed. Used for reading switches, driving solenoids and control one LED strip.</li>
+<li><a href="./io_16x8_matrix/">IO_16x8_matrix</a>: convenient if a switch matrix is used. Especially if the original cable harness shall be used. Can control a 16x8 switch matrix. Or use for 16 inputs and 8 outputs. Also can control one LED strip.</li>
+<li><a href="./out_8x10/">Out_8x10</a>: convenient if a lamp matrix is used. Especially if the original cable harness shall be used. Can control a 8x10 lamp matrix (only LEDs, no incandescent light bulbs!). Or use for 8 high side outputs and 10 low side outputs. Also can control one LED strip.</li>
+<li><a href="./opto_16/">Opto_16</a>: used to directly attach optical switches like opto couplers or LED transmitter/receiver pairs.</li>
+</ul>
+<p>The following table shows how many functions can be done with wich PCB. With that table you can estimate how many PCBs you need for your specific project. Just count the needed solenoids, flashers, lamps and switches. Take into account if you want to use controlled LED strips vs LED matrix vs direct LED drivers (mostly a mixture is used). Also think about direct switches vs switch matrix. And take into account if you have original opto boards from your pin or not.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Function/Name</th>
+<th style="text-align: center;">IO_16_8_1</th>
+<th style="text-align: center;">IO_16x8_matrix</th>
+<th style="text-align: center;">Out_8x10</th>
+<th style="text-align: center;">Opto_16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">direct switch</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">switch matrix</td>
+<td style="text-align: center;">8x8 <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td style="text-align: center;">16x8</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">solenoid</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">direct LED</td>
+<td style="text-align: center;">4+8 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td style="text-align: center;">8 <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
+<td style="text-align: center;">10 <sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED matrix</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">8x10</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED flasher</td>
+<td style="text-align: center;">4+8 <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">10 <sup id="fnref3:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED strip</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">opto switch</td>
+<td style="text-align: center;">(16) <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td style="text-align: center;">(16) <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">UART/SPI/I2C</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">ADC <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">PWM <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-connect-ppuc-pcbs-with-pinball-parts">How to Connect PPUC-PCBs With Pinball Parts</h2>
+<h3 id="direct-switch">Direct Switch</h3>
+<p>Wiring is straight forward. Switches must close to ground (GND, G). The GND can be connected at the switches or at the terminal clamp. All terminals named "G" are good for the common switch connection.</p>
+<p>Recommendation for wire cross section is 0.25 mm². The wires can be as thin as it is practical from a mechanical point of view. They must carry only a few milliamperes of current. They should not be thicker than 0.5 mm² as they should easily fit into a terminal clamp (better if two wires fit into one clamp).</p>
+<p><img alt="direct switch schematic" src="../images/hardware/direct_switch_scm.png" /></p>
+<p><img alt="direct switch wiring" src="../images/hardware/direct_switch_wire.png" /></p>
+<h3 id="switch-matrix">Switch Matrix</h3>
+<p>To use the switches in a matrix all switches must have a diode in series. The switches are not connected to ground but to the column and row terminals (if the terminals act as row or column has to be declared in the configuration file).</p>
+<p>Recommendation for wire cross section is 0.25 mm². The wires can be as thin as it is practical from a mechanical point of view. They must carry only a few milliamperes of current. They should not be thicker than 0.5 mm² as they should easily fit into a terminal clamp (better if two wires fit into one clamp).</p>
+<p><img alt="switch matrix schematic" src="../images/hardware/switch_matrix_scm.png" /></p>
+<p><img alt="switch matrix wiring" src="../images/hardware/switch_matrix_wire.png" /></p>
+<h3 id="solenoid">Solenoid</h3>
+<p>Wiring solenoids is straight forward. Two terminals for each solenoid. No need for a diode. If there is a diode already at the coil you can leave it there but make sure the HV terminal is at the diodes ring. Better double check - otherwise smoke will rise.</p>
+<p>Be aware that the power output switches are open drain. Therefore you also need a power supply for the solenoids. This is distributed by the board to the HV-terminals. Just connect the power (e.g. 48 V) to the terminals called HV_IN (+) and G_IN (-).</p>
+<p>Use a paired cable (like speaker cable). Recommendation for wire cross section is 2 x 0.5 mm². Shouldn't be thicker than 1.5 mm² as the clamps can't take thicker cables.</p>
+<p><img alt="solenoid schematic" src="../images/hardware/solenoid_scm.png" /></p>
+<p><img alt="solenoid wiring" src="../images/hardware/solenoid_wire.png" /></p>
+<h3 id="direct-led">Direct LED</h3>
+<p>To connect a LED (including rectifier, current limiting resistor and capacitor) you can use a mid power output that closes the circuit to ground (same is true for drivers of the matrix boards wich could also be used). Therefore the LED must be supplied with a voltage of typically 6.3 V but 5 V will do as well with slightly reduced brightness.</p>
+<p>Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.</p>
+<p><a id="section_pwm_and_leds"></a></p>
+<h4 id="pwm-and-leds">PWM and LEDs</h4>
+<p>You could also use a high power output and connect them like solenoids (with adjusted PWM value in the config file). In that case usually (depending on your voltage) an additional filter circuit is necessary. Unfiltered LEDs may burn if operated with a pulse current bigger than double the rated current. So be careful if you want reduce the voltage more than a factor of two. Many LEDs have a built in filter (they are called "flicker free" or likewise). Unfortunately no technical data is available, so you have to find out yourself. For example, the filtered LEDs I used were good at a factor of 4 (25 % PWM at 24 V) but burnt at a factor of 8 (12.5 % PWM at 48 V).</p>
+<p><img alt="direct led schematic" src="../images/hardware/direct_led_scm.png" /></p>
+<p><img alt="direct led wiring" src="../images/hardware/direct_led_wire.png" /></p>
+<h3 id="led-matrix">LED Matrix</h3>
+<p>A LED matrix can only be controlled by the Out_8x10 board. Like in the switch matrix every LED must have a diode in series. The LEDs are connected to the high-side and low-side switches of the Out_8x10 board. Be aware that you need a high supply voltage (20 V) for the matrix as the LEDs are only on for a short time. Also be aware that the LEDs must have a filter (usually a resistor and capacitor) inside (called "flicker free" or likewise). See also chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
+<p>Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.</p>
+<p><img alt="led matrix schematic" src="../images/hardware/led_matrix_scm.png" /></p>
+<p><img alt="led matrix wiring" src="../images/hardware/led_matrix_wire.png" /></p>
+<h3 id="led-flasher">LED Flasher</h3>
+<p>Flashers are connected like direct LEDs. Use a mid power output or connect them like solenoids (with adjusted PWM value in the config file). See also chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
+<h3 id="general-illumination-gi">General Illumination (GI)</h3>
+<p>The GI can be connected like direkt LEDs (consisting of several LEDs in parallel). Use mid power outputs or high power outputs. When using higher voltages with PWM make sure you also read chapter <a href="#section_pwm_and_leds">PWM and LEDs</a>.</p>
+<h3 id="controlled-led-strip">Controlled LED Strip</h3>
+<p>Controlled LED strips (e.g. with WS2812B LEDs) are daisy chained LEDs that can be individually controlled. To archive that each LED has a chip inside. Power supply is 5 V and the single data line is connected to a special terminal (#25).</p>
+<p>How much current for LED strips? No idea as there is no value in the data sheet. Just found this as a reference (36 mA per RGB-LED for WS2812B): <a href="https://suntechlite.com/power-consumption-of-ws2811-ws2812b-ws2813-ws2815-sk6812/">SunTech Lite</a></p>
+<p>Recommendation for wire cross section is 0.5 mm² (for power lines).</p>
+<p><img alt="led strip schematic" src="../images/hardware/led_strip_scm.png" /></p>
+<p><img alt="led strip wiring" src="../images/hardware/led_strip_wire.png" /></p>
+<h3 id="optical-switches">Optical Switches</h3>
+<p>If you have the original opto boards form you pinball, you can use them and connect them like direct switches or within a switch matrix.</p>
+<p>If you don't have the original board you can use the Opto_16 board. This has divers and receivers for 16 optical switches. They can be configured (with jumpers) in two groups: for LED receivers and for transistor receivers.</p>
+<p>Recommendation for wire cross section is 0.25 mm².</p>
+<p><img alt="opto diode schematic" src="../images/hardware/opto_diode_scm.png" /></p>
+<p><img alt="opto transistor schematic" src="../images/hardware/opto_transistor_scm.png" /></p>
+<p><img alt="opto wiring" src="../images/hardware/opto_wire.png" /></p>
+<h3 id="display_1">Display</h3>
+<p>These kinds of display are commonly used in pinball machines:</p>
+<ul>
+<li>TFT: thin film transistor technology, used in newer machines, well known from computer monitors. If you want to use a TFT in your own machine you can connect this directly to your main pinball controller (like a raspberry pi) per HDMI or similar.</li>
+<li>DMD: dot matrix display, used in the 90th, typically a monochrome (orange) plasma with a typical resolution of 128x32 pixel. In your own PPUC pinball machine you want to replace this by a RGB-LED-matrix display. See section <a href="../zedmd/">ZeDMD</a>.</li>
+<li>Segment: 7 or more plasma segments that can display alphanumerical content, used in earlier pins. In your own PPUC pinball machine you want to replace these by a RGB-LED-matrix display. See section <a href="../zedmd/">ZeDMD</a>.</li>
+</ul>
+<h3 id="sound">Sound</h3>
+<p>To get some audio to your ears one or more speakers and an amplifier is necessary. The audio source is generated by the main pinball controller (like a raspberry pi) and can be connected by Bluetooth or USB or audio jack. There is no special PPUC equipment available (as it isn't needed).</p>
+<h2 id="how-to-connect-ppuc-pcbs-with-each-other">How to Connect PPUC-PCBs With Each Other</h2>
+<p>All PPUC board needs a power supply (5 V) and a connection to the communication bus (RS485).</p>
+<p>The 5 V power supply can be wired in a star topology or from one board to the next. Connect the 5 V power supply to the terminals called 5_IN (+) and G (-). The board itself doesn't need much power (about 250 mW). Therefore the wires can be thin. Anyways it's recommended to use 0.5 mm² cross section as you often want to power more from the 5 V (like LED strips).</p>
+<p>The bus connection shall be made in a line topology (one board to the next) using terminals called "A" and "B". Typically starting at the main pinball controller (like a raspberry pi) and end on one of the PPUC boards. Be aware that the communication bus works best when it is terminated on both ends and has a bias network anywhere along the bus. This can conveniently be done by jumpers on the PPUC boards. </p>
+<ul>
+<li>IO_16_8_1: set JP2 for termination. Set JP1 and JP3 for biasing.</li>
+<li>IO_16x8_matrix, Opto_16, Out_8x10: set JP1 for termination (no biasing possible)</li>
+</ul>
+<p>Use only exactly one bias network on the bus (no matter where). Terminate the bus at the start (usually an adapter connected to the PC or Raspberry Pi) and at the  end (the last board in line). Don't terminate in between and never add more than these two terminations.</p>
+<p><img alt="bus termination and bias" src="../images/hardware/bus_term_bias.png" /></p>
+<p>If you use a shielded cable you can connect the shield to the terminal called SHD. Shielding is not mandatory but twisted pair cable is recommended.</p>
+<h2 id="rs485-adapters">RS485 Adapters</h2>
+<p>To connect the bus to a PC or Raspberry Pi, usually an adapter from USB to RS485 is used.</p>
+<p><img alt="USB to RS485 adapter" src="../images/hardware/rs485adapter.jpg" /></p>
+<p>These adapters come with different chips to to the job, which can be a source of issues. Additionally the chips can be configured by the operating system regarding the timing and buffers. In many applications this configuration is set for a minimum load for the operating system. In our use case it should be set to perform a rather quick response (small buffers, low latency timing).  </p>
+<p>Here is an example of the an FTDI chip FT232B: it won't work because of the latency timing. This is set to 16 ms per default. When changed to 2 ms it works with PPUC.
+In Linux the setting can be changed in this device-file:<br />
+/sys/bus/usb-serial/devices/ttyUSB0/latency_timer<br />
+Just change the number from 16 to 2 with an text editor.</p>
+<p>Another example: with the chip ch341 no changes are needed.</p>
+<p>If you have more examples please let us know or write it down here.</p>
+<h2 id="thoughts-on-power-supply">Thoughts on Power Supply</h2>
+<p>It can kill you! Be aware that you work with deadly voltages, especially on the primary side. If you don't know exactly what you are doing, leave it and ask for help on this part. I repeat: it can kill you, no joke!</p>
+<p><img alt="high_voltage" src="../images/hardware/high_voltage_warning.png" /></p>
+<p>Having said that let's come to the technical part. You have to know how much power you need on the 5 V side and on the 48 V side and if it should be 48 V or less. Let's brake this down:</p>
+<h3 id="5-v-supply">5 V Supply:</h3>
+<ul>
+<li>PPUC boards -&gt; 250 mW per board</li>
+<li>LED strip -&gt; 180 mW per RGB-LED</li>
+<li>single LED or LED matrix or GI -&gt; 100 mW per LED</li>
+<li>ZeDMD -&gt; 20 W maximum (all pixels white). In pinball use with lots of colors and therefore less brightness it's probably the half.</li>
+<li>Raspberry Pi 4: 12 W</li>
+</ul>
+<p>For example: 4 boards (1 W) + 50 GI LEDs (5 W) + 70 LED-strip (13 W) + ZeDMD (20 W) + Raspberry Pi (12 W) -&gt; adds up to 51 W. So you need a 5 V, 10 A power supply. Of course you can split the 5 V supply. E.g. power the Pi or the DMD with a separate power supply.</p>
+<h3 id="48-v-supply">48 V Supply:</h3>
+<p>48 V is a good standard voltage for modern solenoids. But you could as well use 24 V (for older solenoids). It depends on what you already have. But be aware that with the PWM you can lower the 48 V to any voltage you want. For example with 48 V and a PWM of 50 % the solenoids akt like they would be connected to 24 V.</p>
+<p>It's hard to estimate the needed power on the 48 V side. That depends much on how many solenoids are used and how many are active at the same time. Are magnets in the machine? To get a feeling: a WPC flipper finger needs 500 W when flipping (takes about 25 milliseconds) and 30 W while holding.</p>
+<p>Recommendation is 500 W for WPC and modern machines (500 W are used in Stern Spike 2 systems). For a system 11 probably 350 W is sufficient. </p>
+<h3 id="20-v-for-led-matrix">20 V for LED Matrix</h3>
+<p>If you want to use a LED matrix you must have a power supply of about 20 V. You can derive that from your 48 V with a DC/DC converter or use a separate power supply for the matrix. Needed power is 100 mW per LED.</p>
+<h3 id="power-for-audio">Power for Audio</h3>
+<p>If your amplifier doesn't have a power supply on board, you need that on top. It's recommended to use a separate power supply for sound (less distortion and noise). Needed power and voltage depends on your amplifier (look in it's data sheet). Typical values are 24 V, 100 W.</p>
+<h2 id="putting-it-all-together">Putting it All Together</h2>
+<p><img alt="overview" src="../images/hardware/overview.png" /></p>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Something missing or wrong? You can fix it!</p>
+<p>This website is edited by people like you!
+Is something wrong or missing? Is something out of date, or can you explain it better?</p>
+<p>Please help us! You can fix it yourself and be an official "open source" contributor!</p>
+<p>It's easy! See our <em><a href="../about/help/">Beginner's guide to editing the docs</a></em>.</p>
+</div>
+<details class="tip">
+<summary>Page navigation via the keyboard: <span class="keys"><kbd class="key-less">&lt;</kbd></span> <span class="keys"><kbd class="key-greater">&gt;</kbd></span></summary>
+<p>You can navigate this site via the keyboard. There are two modes:</p>
+<p>General navigation, when <em>search</em> is not focused:</p>
+<ul>
+<li><span class="keys"><kbd class="key-f">F</kbd></span> , <span class="keys"><kbd class="key-s">S</kbd></span> , <span class="keys"><kbd class="key-slash">/</kbd></span> : open search dialog</li>
+<li><span class="keys"><kbd class="key-p">P</kbd></span> , <span class="keys"><kbd class="key-comma">,</kbd></span> : go to previous page</li>
+<li><span class="keys"><kbd class="key-n">N</kbd></span> , <span class="keys"><kbd class="key-period">.</kbd></span> : go to next page</li>
+</ul>
+<p>While using the <em>search</em> function:</p>
+<ul>
+<li><span class="keys"><kbd class="key-arrow-down">Down</kbd></span> , <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> : select next / previous result</li>
+<li><span class="keys"><kbd class="key-escape">Esc</kbd></span> , <span class="keys"><kbd class="key-tab">Tab</kbd></span> : close search</li>
+<li><span class="keys"><kbd class="key-enter">Enter</kbd></span> : go to highlighted page in the results</li>
+</ul>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>with modifications on input resistor. On cost of inputs. Mixture mode is also possible (e.g. 8 direct switches and a 4x4 matrix)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>4 x mid power output on cost of 4 inputs plus 8 high power outputs&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>only the receiver side can be connected if it is an transistor type and if it switches to GND (common emitter). On cost of inputs.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>on cost of matrix drivers&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>analog to digital converter&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>pulse with modulation (e.g. for analog output signals)&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ppuc/how_to_run/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Run PPUC">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Run PPUC
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="io_16_8_1/" class="md-footer__link md-footer__link--next" aria-label="Next: IO_16_8_1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                IO_16_8_1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/PPUC" target="_blank" rel="noopener" title="PPUC Organization" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/fkkk4MbBn5" target="_blank" rel="noopener" title="Join our Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
